@@ -63,7 +63,9 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 10px var(--primary-color);
+            text-align: center;
         }
+        
         .section h2 {
             text-align: center;
             margin-bottom: 20px;
@@ -76,6 +78,10 @@
         .section ul li {
             margin: 10px 0;
             font-size: 16px;
+        }
+        .section img {
+            display: block;
+            margin: 10px auto; /* Centers the image within the section */
         }
         .skills-list {
             display: flex;
@@ -105,7 +111,7 @@
     </nav>
 
     <div class="header">
-        <img src="img.png" alt="Abdul Kalam">
+        <img src="img.png" alt="Abdul Kalam" style="width: 150px; height: 150px; border: 4px solid var(--primary-color); border-radius: 10px;">
         <h1>Abdul Kalam S.A</h1>
         <p>akkalam305@gmail.com</p>
         <p>📞 +919159478581</p>
@@ -114,9 +120,11 @@
     </div>
     <section id="about">
         <h2>About Me</h2>
+        <div style="text-align: center;">
         <p>Versatile embedded systems maestro skilled in the magic of Machine Learning. Eager to contribute to my technical prowess to projects that demand innovation, weaving a seamless tapestry of embedded excellence, cutting-edge image processing, and Machine Learning solutions.</p>
+        </div>
     </section>
-
+    
     <div class="main">
         <div class="section">
             <section id="skills">
