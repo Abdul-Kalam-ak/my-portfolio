@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Kalam Portfolio</title>
-    <style>
+    :root {
+            --primary-color: #FFA500;
+            --background-color: #000;
+            --section-bg-color: #111;
+        }
+
+        /* General Styles */
         body {
-            font-family: 'Press Start 2P', monospace;
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #FFA500;
+            font-family: 'Press Start 2P', monospace;
+            background-color: var(--background-color);
+            color: var(--primary-color);
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .header {
-            background-color: #111;
-            border: 2px solid #FFA500;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px #FFA500;
         }
         .header img {
             width: 150px;
@@ -41,6 +39,22 @@
             max-width: 800px;
             margin-top: 20px;
         }
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            background: var(--background-color);
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            margin: 5px;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+
         .section {
             background-color: #111;
             border: 2px solid #FFA500;
@@ -78,6 +92,17 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#Frameworks and Tools">Frameworks and Tools</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certifications">Certifications</a>
+    </nav>
+
     <div class="header">
         <img src="img.png" alt="Abdul Kalam">
         <h1>Abdul Kalam S.A</h1>
@@ -86,9 +111,15 @@
         <p>📍 Chennai, Tamil Nadu</p>
         <p><a href="https://github.com/Abdul-Kalam-ak" style="color: #FFA500; text-decoration: none;" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/abdul-kalam-201568249/" style="color: #FFA500; text-decoration: none;" target="_blank">LinkedIn</a></p>
     </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Versatile embedded systems maestro skilled in the magic of Machine Learning. Eager to contribute to my technical prowess to projects that demand innovation,weaving a seamless tapestry of embedded excellence,cuttingedge image processing, and Machine Learning solutions.</p>
+    </section>
+
 
     <div class="main">
         <div class="section">
+            <section id="skills">
             <h2>🛠️ Technical Skills</h2>
             <div class="skills-list">
                 <span>Python (Intermediate)</span>
@@ -110,6 +141,7 @@
         </div>
 
         <div class="section">
+            <section id="Frameworks and Tools">
             <h2>🔧 Frameworks and Tools</h2>
             <ul>
                 <li>Numpy, Matplotlib, TensorFlow,Jupyter, Arduino, Nano, Pico, Raspberry Pi</li>
@@ -119,6 +151,7 @@
         </div>
 
         <div class="section">
+            <section id="projects">
             <h2>📂 Projects</h2>
             <ul>
                 <li><strong>Real-time Ammonia Monitoring</strong>: IoT system to monitor ammonia levels in public restrooms.</li>
@@ -129,6 +162,7 @@
         </div>
 
         <div class="section">
+            <section id="education">
             <h2>📚 Education</h2>
             <ul>
                 <li><strong>Bachelor of Engineering (ECE)</strong> - Saveetha Engineering College (2024 - Present), 8.3 CGPA</li>
@@ -138,6 +172,7 @@
         </div>
 
         <div class="section">
+            <section id="experience">
             <h2>💼 Experience</h2>
             <ul>
                 <li><strong>Content Creator and Freelancer</strong> - 3+ Years</li>
@@ -146,6 +181,7 @@
         </div>
 
         <div class="section">
+            <section id="achievements">
             <h2>🏆 Achievements</h2>
             <ul>
                 <li>First prize in idea pitching at inter-level competitions.</li>
@@ -172,6 +208,7 @@
         </div>
 
         <div class="section">
+            <section id="certifications">
             <h2>🎓 Certifications</h2>
             <ul>
                 <li>Introduction to IoT and Cloud Computing (NPTEL).</li>
