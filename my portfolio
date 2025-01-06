@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #FFA500;
+            --background-color: #000;
+            --section-bg-color: #111;
+        }
+
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', monospace;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Retro Header */
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* Navigation Menu */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            background: var(--background-color);
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            margin: 5px;
+            display: inline-block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+
+        /* Sections */
+        section {
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid var(--primary-color);
+            background-color: var(--section-bg-color);
+            box-shadow: 0 0 10px var(--primary-color);
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Retro Portfolio
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Passionate about technology and innovation, I am a dedicated professional with experience in electronics, IoT, and software development. My goal is to create impactful solutions through creativity and engineering expertise.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Embedded Systems Development</li>
+            <li>Python, C, and JavaScript</li>
+            <li>IoT Integration</li>
+            <li>Machine Learning</li>
+            <li>Frameworks: TensorFlow, Arduino, MATLAB, Power BI</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Integrated Component Health Monitoring System</h3>
+        <p>A system utilizing Raspberry Pi, thermal imaging, and computer vision to detect and analyze faults in electronic components.</p>
+
+        <h3>Line Stop-Message Diligence</h3>
+        <p>Developed an Arduino-based alert system for notifying stakeholders when power to specific production lines is interrupted.</p>
+
+        <h3>Real-time Ammonia Monitoring in Public Restrooms</h3>
+        <p>A monitoring system that detects ammonia levels in public toilets using IoT technology.</p>
+
+        <h3>Visual Painting</h3>
+        <p>Created a painting application using PyCharm and image processing to paint with finger gestures.</p>
+
+        <h3>Deepfake Detection</h3>
+        <p>Developed a machine learning model using the Meso method to detect deepfaked images.</p>
+
+        <h3>Emotion Detection and Music Playlist Automation</h3>
+        <p>Automated music playlist selection based on user facial expressions using machine learning.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Bachelor of Engineering (ECE)</strong> - Saveetha Engineering College (2024-Present), 8.3 CGPA</li>
+            <li><strong>HSC</strong> - A.K.T. Academy Matric Higher Secondary School (2020-2021), 81.7%</li>
+            <li><strong>SSLC</strong> - A.K.T. Academy Matric Higher Secondary School (2019), 75%</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Freelancer</strong>: Content creator and developer (3+ years).</li>
+            <li><strong>Internship</strong>: LMES Academy - Content creation and course development (2023).</li>
+        </ul>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>First prize in idea pitching (Inter-level).</li>
+            <li>First prize in paper presentation (Rajalakshmi College).</li>
+            <li>Second prize in paper presentation (Loyola ICAM College).</li>
+            <li>First prize in BrizzMatrix (Data analysis competition, Anna University).</li>
+            <li>Published a patent: "Real-Time Ammonia Monitoring in Public Restrooms".</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:akkalam305@gmail.com">akkalam305@gmail.com</a></p>
+        <p>Phone: +919159478581</p>
+        <p>GitHub: <a href="https://github.com/Abdul-Kalam-ak">Abdul-Kalam-ak</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/abdul-kalam-201568249/">Abdul Kalam</a></p>
+    </section>
+
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear());</script> My Retro Portfolio
+    </footer>
+</body>
+</html>
