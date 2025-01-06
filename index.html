@@ -22,7 +22,19 @@
             flex-direction: column;
             align-items: center;
         }
+        .about-container {
+        display: flex;
+        align-items: center;
+        }
 
+        .about-image {
+         width: 150px;
+         height: 150px;
+         border: 2px solid var(--primary-color);
+         border-radius: 50%;
+         margin-right: 20px;
+        }
+ 
         h1, h2, h3 {
             text-align: center;
             text-transform: uppercase;
@@ -98,9 +110,12 @@
 
     <section id="about">
         <h2>About Me</h2>
+        <div class="about-container">
+        <img src="img.png" alt="Your Description" class="about-image">
+        <p>Passionate about technology and innovation, I am a dedicated professional with experience in electronics, IoT, and software development. My goal is to create impactful solutions through creativity and engineering expertise.</p>
+    </div>
         <p>Passionate about technology and innovation, I am a dedicated professional with experience in electronics, IoT, and software development. My goal is to create impactful solutions through creativity and engineering expertise.</p>
     </section>
-
     <section id="skills">
         <h2>Skills</h2>
         <ul>
