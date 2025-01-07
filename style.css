@@ -178,3 +178,14 @@ nav a:hover {
     background: var(--primary-color);
     color: var(--background-color);
 }
+@media (max-width: 600px) {
+    .hero-section {
+        grid-template-columns: 1fr; /* Stack content vertically */
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
