@@ -178,14 +178,25 @@ nav a:hover {
     background: var(--primary-color);
     color: var(--background-color);
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .hero-section {
-        grid-template-columns: 1fr; /* Stack content vertically */
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-
     .hero-image img {
         width: 200px;
         height: 200px;
     }
+    .hero-details {
+        align-items: center;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .section {
+        padding: 15px;
+    }
 }
+
 
