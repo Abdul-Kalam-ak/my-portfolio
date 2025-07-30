@@ -2,38 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog | Ak</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <a href="../index.html" class="back-button">← Back to Home</a>
-    <h1>Latest from Medium</h1>
-    <div class="blog-grid" id="blogContainer">
-      <!-- Blog posts will load here -->
-    </div>
-  </div>
+  <a href="index.html" class="back-button">← Back to Home</a>
+  <h1>Latest from Medium</h1>
   <div class="card-container" id="blogContainer"></div>
-  <script>
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@akkalam305")
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("blogContainer");
-        data.items.forEach(post => {
-          const card = document.createElement("div");
-          card.className = "blog-card";
 
-          card.innerHTML = `
-            <h3>${post.title}</h3>
-            <p>${new Date(post.pubDate).toDateString()}</p>
-            <img src="${post.thumbnail}" alt="${post.title}">
-            <a href="${post.link}" target="_blank">Read more →</a>
-          `;
-
-          container.appendChild(card);
-        });
-      });
-  </script>
+  <!-- Link to your blog.js here -->
+  <script src="blog.js"></script>
 </body>
 </html>
