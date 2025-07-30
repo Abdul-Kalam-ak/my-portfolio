@@ -1,69 +1,86 @@
-/* General Reset */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0f0f0f;
+  color: #facc15;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 20px;
-}
-
-/* Header */
-header {
+.blog-title {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 36px;
+  margin-top: 20px;
+  color: #facc15;
+  border-bottom: 2px solid #facc15;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
 }
 
-header h1 {
-  font-size: 2rem;
-  color: #222;
-}
-
-/* Blog Container */
 .blog-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
-  justify-content: center;
+  padding: 30px;
 }
 
-/* Blog Card */
-.blog-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-}
-
-.blog-card h3 a {
-  text-decoration: none;
-  color: #0077cc;
-}
-
-.blog-card h3 a:hover {
-  color: #005fa3;
-}
-
-.blog-card .date {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
+.card {
+  background-color: #1e1e1e;
+  border: 2px solid #facc15;
+  border-radius: 12px;
+  padding: 16px;
   text-align: center;
-  margin-top: 50px;
-  color: #777;
+  color: #facc15;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.card a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Back Button */
+.back-button {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #facc15;
+  border: 2px solid #facc15;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.back-button:hover {
+  background-color: #facc15;
+  color: #0f0f0f;
 }
