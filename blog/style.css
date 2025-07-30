@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  background-color: #000;
+  background-color: var(--background-color);
   color: #fff;
   font-family: 'Press Start 2P', monospace;
   margin: 0;
