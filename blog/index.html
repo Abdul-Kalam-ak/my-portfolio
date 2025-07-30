@@ -2,18 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Blog</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>Blogs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .blog-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      transition: 0.3s;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.05);
+    }
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .blog-card h3 {
+      margin: 15px 0 5px;
+      font-size: 20px;
+    }
+    .blog-card p {
+      color: #555;
+    }
+    .blog-card a {
+      text-decoration: none;
+      color: black;
+    }
+    .blog-card time {
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="../index.html">Home</a> |
-    <a href="index.html">Blog</a>
-  </nav>
-  <h1>Blog</h1>
-  <ul>
-    <li><a href="post1.html">How I Built My Portfolio</a></li>
-    <!-- Add more posts here -->
-  </ul>
+
+  <h1>Latest from Medium</h1>
+  <div class="blog-list" id="medium-blogs"></div>
+
+  <script>
+    const username = "akkalam305"; // Replace with your Medium username
+    const rss_url = `https://medium.com/feed/@${username}`;
+    const api_url = `https://api.rss2json.com/v1/api.json?rss_url=${rss_url}`;
+
+    fetch(api_url)
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('medium-blogs');
+        const posts = data.items.filter(item => item.categories.length > 0); // skip Medium welcome post
+
+        posts.forEach(post => {
+          container.innerHTML += `
+            <div class="blog-card">
+              <a href="${post.link}" target="_blank">
+                <img src="${post.thumbnail}" alt="${post.title}">
+                <h3>${post.title}</h3>
+              </a>
+              <time>${new Date(post.pubDate).toDateString()}</time>
+              <p>${post.description.substring(0, 120)}...</p>
+            </div>
+          `;
+        });
+      })
+      .catch(err => {
+        document.getElementById('medium-blogs').innerHTML = '<p>Error loading blog posts.</p>';
+        console.error(err);
+      });
+  </script>
+
 </body>
 </html>
